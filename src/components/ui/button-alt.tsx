@@ -64,23 +64,6 @@ const variantClasses: Record<ButtonAltVariant, string> = {
   ].join(' '),
 };
 
-const ArrowRightIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    width="22"
-    height="22"
-    viewBox="0 0 22 22"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden
-  >
-    <path d="M5 11h12M12 5l6 6-6 6" />
-  </svg>
-);
-
 export const ButtonAlt = forwardRef<HTMLButtonElement, ButtonAltProps>(
   (
     {
@@ -119,7 +102,11 @@ export const ButtonAlt = forwardRef<HTMLButtonElement, ButtonAltProps>(
           )}
           <span className="truncate">{children}</span>
         </span>
-        <span className={iconSizeClasses}>{IconRight ? <IconRight /> : <ArrowRightIcon />}</span>
+        {IconRight && (
+          <span className={iconSizeClasses}>
+            <IconRight />
+          </span>
+        )}
       </>
     );
 
