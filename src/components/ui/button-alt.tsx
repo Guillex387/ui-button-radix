@@ -2,7 +2,8 @@ import { forwardRef, type ComponentType, type ReactNode } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cn } from '../../lib/utils';
 
-const iconSizeClasses = 'size-[22px] shrink-0 flex items-center justify-center [&_svg]:size-full [&_svg]:object-contain';
+const iconSizeClasses =
+  'size-[22px] shrink-0 flex items-center justify-center [&_svg]:size-full [&_svg]:object-contain';
 
 export type ButtonAltVariant = 'primary' | 'secondary' | 'delete';
 
@@ -64,7 +65,18 @@ const variantClasses: Record<ButtonAltVariant, string> = {
 };
 
 const ArrowRightIcon = ({ className }: { className?: string }) => (
-  <svg className={className} width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+  <svg
+    className={className}
+    width="22"
+    height="22"
+    viewBox="0 0 22 22"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+  >
     <path d="M5 11h12M12 5l6 6-6 6" />
   </svg>
 );
@@ -83,7 +95,7 @@ export const ButtonAlt = forwardRef<HTMLButtonElement, ButtonAltProps>(
       type = 'button',
       ...props
     },
-    ref
+    ref,
   ) => {
     const isDisabled = disabled ?? state === 'disabled';
     const dataState = state && state !== 'default' ? state : undefined;
@@ -107,9 +119,7 @@ export const ButtonAlt = forwardRef<HTMLButtonElement, ButtonAltProps>(
           )}
           <span className="truncate">{children}</span>
         </span>
-        <span className={iconSizeClasses}>
-          {IconRight ? <IconRight /> : <ArrowRightIcon />}
-        </span>
+        <span className={iconSizeClasses}>{IconRight ? <IconRight /> : <ArrowRightIcon />}</span>
       </>
     );
 
@@ -122,18 +132,11 @@ export const ButtonAlt = forwardRef<HTMLButtonElement, ButtonAltProps>(
     }
 
     return (
-      <button
-        ref={ref}
-        type={type}
-        disabled={isDisabled}
-        className={mergedClassName}
-        data-state={dataState}
-        {...props}
-      >
+      <button ref={ref} type={type} disabled={isDisabled} className={mergedClassName} data-state={dataState} {...props}>
         {content}
       </button>
     );
-  }
+  },
 );
 
 ButtonAlt.displayName = 'ButtonAlt';

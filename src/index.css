@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* HolaSoft Design Vol 1 - design tokens */
 @theme {
@@ -9,8 +9,8 @@
   /* Radius */
   --radius-btn: 8px;
   /* Fonts */
-  --font-poppins: "Poppins", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
   /* Primary */
   --color-btn-primary: #213c86;
   --color-btn-primary-hover: #091646;
