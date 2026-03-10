@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* HolaSoft Design Vol 1 - design tokens */
+@theme {
+  /* Spacing */
+  --spacing-btn-x: 16px;
+  --spacing-btn-y: 12px;
+  --spacing-btn-gap: 8px;
+  /* Radius */
+  --radius-btn: 8px;
+  /* Fonts */
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  /* Primary */
+  --color-btn-primary: #213c86;
+  --color-btn-primary-hover: #091646;
+  --color-btn-primary-active: #091646;
+  --color-btn-primary-focus-ring: #091646;
+  --color-btn-primary-disabled-bg: #dfdfdf;
+  --color-btn-primary-disabled-border: #5d5d5d;
+  --color-btn-primary-disabled-text: #5d5d5d;
+  /* Secondary */
+  --color-btn-secondary-border: #213c86;
+  --color-btn-secondary-text: #213c86;
+  --color-btn-secondary-hover-bg: #c1dbfc;
+  --color-btn-secondary-hover-border: #425998;
+  --color-btn-secondary-hover-text: #091646;
+  --color-btn-secondary-active-bg: #c1dbfc;
+  --color-btn-secondary-active-border: #091646;
+  --color-btn-secondary-focus-border: #091646;
+  --color-btn-secondary-disabled-border: #c5c5c5;
+  --color-btn-secondary-disabled-text: #5d5d5d;
+  /* Delete */
+  --color-btn-delete: #b93f38;
+  --color-btn-delete-hover: #a02e26;
+  --color-btn-delete-active: #a02e26;
+  --color-btn-delete-focus-ring: #a02e26;
+  --color-btn-delete-disabled-bg: #dfdfdf;
+  --color-btn-delete-disabled-border: #5d5d5d;
+  --color-btn-delete-disabled-text: #5d5d5d;
+}
