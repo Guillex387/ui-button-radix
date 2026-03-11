@@ -56,8 +56,14 @@ export const buttonVariants = cva(
       },
       size: {
         default: 'h-auto min-h-[48px]',
+        size100: [
+          'h-[var(--size-button-100-h)] min-h-0',
+          'px-[var(--spacing-button-100-x)] py-[var(--spacing-button-100-y)]',
+          'gap-[var(--spacing-button-100-gap)]',
+          'text-[length:var(--font-size-button-100)]',
+          '[&_svg]:size-[var(--size-button-icon-100)]',
+        ].join(' '),
         // size200: '',
-        // size100: '',
         // size50: '',
       },
     },

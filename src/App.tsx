@@ -135,6 +135,12 @@ function App() {
           <Button variant="delete" data-state="disabled" iconLeft={IconTrash}>
             DeleteAlt
           </Button>
+          <Button variant="delete">
+            <IconTrash />
+          </Button>
+          <Button variant="delete" size="size100" iconLeft={IconTrash}>
+            DeleteAlt
+          </Button>
         </div>
       </section>
     </div>

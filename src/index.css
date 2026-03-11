@@ -6,6 +6,14 @@
   --spacing-btn-x: 16px;
   --spacing-btn-y: 12px;
   --spacing-btn-gap: 8px;
+
+  /* Button size100 (Figma size-200 height = 24px, legal = 12px, icon size-100 = 16px) */
+  --size-button-100-h: 24px;
+  --spacing-button-100-x: 8px;
+  --spacing-button-100-y: 4px;
+  --spacing-button-100-gap: 4px;
+  --font-size-button-100: 12px;
+  --size-button-icon-100: 16px;
   /* Radius */
   --radius-btn: 8px;
   /* Fonts */
