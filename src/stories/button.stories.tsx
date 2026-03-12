@@ -8,7 +8,53 @@ type ButtonStoryArgs = React.ComponentProps<typeof Button> & {
   dataState?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
 };
 
-/* Iconos para las stories */
+// -----------------------------------------------------------------------------
+// Constantes (una sola fuente de verdad para variantes y tamaños)
+// -----------------------------------------------------------------------------
+
+const VARIANTS = [
+  'primary',
+  'secondary',
+  'delete',
+  'ghost',
+  'ghostDelete',
+  'tertiary',
+  'primaryAlternative',
+  'primaryAlternativeNeutral',
+  'secondaryAlternative',
+  'tertiaryAlternative',
+  'tertiaryAlternativeDecorative',
+  'deleteAlternative',
+] as const;
+
+const VARIANT_LABELS: Record<(typeof VARIANTS)[number], string> = {
+  primary: 'Primary',
+  secondary: 'Secondary',
+  delete: 'Delete',
+  ghost: 'Ghost',
+  ghostDelete: 'Ghost Delete',
+  tertiary: 'Tertiary',
+  primaryAlternative: 'Primary Alternative',
+  primaryAlternativeNeutral: 'Primary Alt Neutral',
+  secondaryAlternative: 'Secondary Alternative',
+  tertiaryAlternative: 'Tertiary Alternative',
+  tertiaryAlternativeDecorative: 'Tertiary Alt Decorative',
+  deleteAlternative: 'Delete Alternative',
+};
+
+const SIZES = ['default', 'size100', 'iconDefault', 'icon200', 'icon100', 'icon50'] as const;
+
+const ICON_SIZE_SPECS: Record<string, string> = {
+  iconDefault: '48×48, 24px',
+  icon200: '36×36, 20px',
+  icon100: '24×24, 16px',
+  icon50: '16×16, 12px',
+};
+
+// -----------------------------------------------------------------------------
+// Iconos para las stories
+// -----------------------------------------------------------------------------
+
 const IconLeft = () => (
   <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" aria-hidden>
     <circle cx="5" cy="11" r="1.5" />
@@ -50,6 +96,20 @@ const IconSend = () => (
   </svg>
 );
 
+// -----------------------------------------------------------------------------
+// Decoradores reutilizables
+// -----------------------------------------------------------------------------
+
+const darkBackgroundDecorator = (Story: React.ComponentType) => (
+  <div className="bg-[#1a1a1a] p-8 rounded-lg">
+    <Story />
+  </div>
+);
+
+// -----------------------------------------------------------------------------
+// Meta
+// -----------------------------------------------------------------------------
+
 const meta = {
   title: 'UI/Button',
   component: Button,
@@ -60,12 +120,12 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative', 'tertiaryAlternative', 'tertiaryAlternativeDecorative', 'deleteAlternative'],
+      options: [...VARIANTS],
       description: 'Variante visual del botón',
     },
     size: {
       control: 'select',
-      options: ['default'],
+      options: [...SIZES],
       description: 'Tamaño',
     },
     disabled: {
@@ -98,7 +158,12 @@ const meta = {
   },
   render: (args: ButtonStoryArgs) => {
     const { dataState, ...rest } = args;
-    return <Button {...rest} data-state={dataState === 'default' || dataState == null ? undefined : dataState} />;
+    return (
+      <Button
+        {...rest}
+        data-state={dataState === 'default' || dataState == null ? undefined : dataState}
+      />
+    );
   },
 } as Meta<typeof Button>;
 
@@ -106,92 +171,70 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+// =============================================================================
+// Playground
+// =============================================================================
+
+export const Default: Story = {
   args: {
     variant: 'primary',
-    children: 'Primary',
+    children: 'Button',
   },
+};
+
+// =============================================================================
+// Variantes (una story por variante para documentación rápida)
+// =============================================================================
+
+export const Primary: Story = {
+  args: { variant: 'primary', children: 'Primary' },
 };
 
 export const Secondary: Story = {
-  args: {
-    variant: 'secondary',
-    children: 'Secondary',
-  },
+  args: { variant: 'secondary', children: 'Secondary' },
 };
 
 export const Delete: Story = {
-  args: {
-    variant: 'delete',
-    children: 'Delete',
-  },
+  args: { variant: 'delete', children: 'Delete' },
 };
 
-export const DeleteAlternative: Story = {
-  args: {
-    variant: 'deleteAlternative',
-    children: 'Delete Alternative',
-  },
+export const Ghost: Story = {
+  args: { variant: 'ghost', children: 'Ghost' },
+};
+
+export const GhostDelete: Story = {
+  args: { variant: 'ghostDelete', children: 'Ghost Delete' },
 };
 
 export const Tertiary: Story = {
-  args: {
-    variant: 'tertiary',
-    children: 'Tertiary',
-  },
+  args: { variant: 'tertiary', children: 'Tertiary' },
+};
+
+export const DeleteAlternative: Story = {
+  args: { variant: 'deleteAlternative', children: 'Delete Alternative' },
 };
 
 export const PrimaryAlternative: Story = {
-  args: {
-    variant: 'primaryAlternative',
-    children: 'Primary Alternative',
-  },
+  args: { variant: 'primaryAlternative', children: 'Primary Alternative' },
 };
 
 export const PrimaryAlternativeNeutral: Story = {
-  args: {
-    variant: 'primaryAlternativeNeutral',
-    children: 'Primary Alternative Neutral',
-  },
-  parameters: {
-    backgrounds: { default: 'dark' },
-  },
-  decorators: [
-    (Story) => (
-      <div className="bg-[#1a1a1a] p-8 rounded-lg">
-        <Story />
-      </div>
-    ),
-  ],
+  args: { variant: 'primaryAlternativeNeutral', children: 'Primary Alt Neutral' },
+  parameters: { backgrounds: { default: 'dark' } },
+  decorators: [darkBackgroundDecorator],
 };
 
 export const SecondaryAlternative: Story = {
-  args: {
-    variant: 'secondaryAlternative',
-    children: 'Secondary Alternative',
-  },
-  parameters: {
-    backgrounds: { default: 'dark' },
-  },
-  decorators: [
-    (Story) => (
-      <div className="bg-[#1a1a1a] p-8 rounded-lg">
-        <Story />
-      </div>
-    ),
-  ],
+  args: { variant: 'secondaryAlternative', children: 'Secondary Alternative' },
+  parameters: { backgrounds: { default: 'dark' } },
+  decorators: [darkBackgroundDecorator],
 };
 
 export const TertiaryAlternative: Story = {
-  args: {
-    variant: 'tertiaryAlternative',
-    children: 'Tertiary Alternative',
-  },
-  parameters: {
-    backgrounds: { default: 'dark' },
-  },
+  args: { variant: 'tertiaryAlternative', children: 'Tertiary Alternative' },
+  parameters: { backgrounds: { default: 'dark' } },
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="bg-[#2352D2] p-8 rounded-lg">
         <Story />
       </div>
@@ -200,18 +243,19 @@ export const TertiaryAlternative: Story = {
 };
 
 export const TertiaryAlternativeDecorative: Story = {
-  args: {
-    variant: 'tertiaryAlternativeDecorative',
-    children: 'Tertiary Alternative Decorative',
-  },
+  args: { variant: 'tertiaryAlternativeDecorative', children: 'Tertiary Alt Decorative' },
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="bg-[#FFEF85] p-8 rounded-lg">
         <Story />
       </div>
     ),
   ],
 };
+
+// =============================================================================
+// Estados
+// =============================================================================
 
 export const Disabled: Story = {
   args: {
@@ -220,6 +264,10 @@ export const Disabled: Story = {
     children: 'Disabled',
   },
 };
+
+// =============================================================================
+// Con iconos
+// =============================================================================
 
 export const WithIconLeft: Story = {
   args: {
@@ -246,19 +294,48 @@ export const WithBothIcons: Story = {
   },
 };
 
+// =============================================================================
+// Showcases (todas las variantes / tamaños)
+// =============================================================================
+
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-4">
-      <Button variant="primary">Primary</Button>
-      <Button variant="secondary">Secondary</Button>
-      <Button variant="delete">Delete</Button>
-      <Button variant="tertiary">Tertiary</Button>
-      <Button variant="primaryAlternative">Primary Alternative</Button>
-      <Button variant="primaryAlternativeNeutral">Primary Alt Neutral</Button>
-      <Button variant="secondaryAlternative">Secondary Alternative</Button>
-      <Button variant="tertiaryAlternative">Tertiary Alternative</Button>
-      <Button variant="tertiaryAlternativeDecorative">Tertiary Alt Decorative</Button>
-      <Button variant="deleteAlternative">Delete Alternative</Button>
+      {VARIANTS.map((v) => (
+        <Button key={v} variant={v}>
+          {VARIANT_LABELS[v]}
+        </Button>
+      ))}
+    </div>
+  ),
+};
+
+export const AllSizes: Story = {
+  render: () => (
+    <div className="flex flex-wrap items-end gap-4">
+      <Button variant="primary" size="default">
+        Default
+      </Button>
+      <Button variant="primary" size="size100">
+        Size 100
+      </Button>
+      <Button variant="primary" size="iconDefault" iconLeft={IconLeft} aria-label="Icon default" />
+      <Button variant="ghost" size="icon200" iconLeft={IconLeft} aria-label="Icon 200" />
+      <Button variant="ghost" size="icon100" iconLeft={IconLeft} aria-label="Icon 100" />
+      <Button variant="ghost" size="icon50" iconLeft={IconLeft} aria-label="Icon 50" />
+    </div>
+  ),
+};
+
+export const IconSizesOnly: Story = {
+  render: () => (
+    <div className="flex flex-wrap items-end gap-6">
+      {(['iconDefault', 'icon200', 'icon100', 'icon50'] as const).map((size) => (
+        <div key={size} className="flex flex-col items-center gap-2">
+          <Button variant="ghost" size={size} iconLeft={IconLeft} aria-label={size} />
+          <span className="text-xs text-gray-500">{size} ({ICON_SIZE_SPECS[size]})</span>
+        </div>
+      ))}
     </div>
   ),
 };
@@ -266,39 +343,18 @@ export const AllVariants: Story = {
 export const WithIconsAllVariants: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-4">
-      <Button variant="primary" iconLeft={IconLeft} iconRight={IconRight}>
-        Primary
-      </Button>
-      <Button variant="secondary" iconLeft={IconLeft} iconRight={IconRight}>
-        Secondary
-      </Button>
-      <Button variant="delete" iconLeft={IconLeft} iconRight={IconRight}>
-        Delete
-      </Button>
-      <Button variant="tertiary" iconLeft={IconLeft} iconRight={IconRight}>
-        Tertiary
-      </Button>
-      <Button variant="primaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
-        Primary Alternative
-      </Button>
-      <Button variant="primaryAlternativeNeutral" iconLeft={IconLeft} iconRight={IconRight}>
-        Primary Alt Neutral
-      </Button>
-      <Button variant="secondaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
-        Secondary Alternative
-      </Button>
-      <Button variant="tertiaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
-        Tertiary Alternative
-      </Button>
-      <Button variant="tertiaryAlternativeDecorative" iconLeft={IconLeft} iconRight={IconRight}>
-        Tertiary Alt Decorative
-      </Button>
-      <Button variant="deleteAlternative" iconLeft={IconLeft} iconRight={IconRight}>
-        Delete Alternative
-      </Button>
+      {VARIANTS.map((v) => (
+        <Button key={v} variant={v} iconLeft={IconLeft} iconRight={IconRight}>
+          {VARIANT_LABELS[v]}
+        </Button>
+      ))}
     </div>
   ),
 };
+
+// =============================================================================
+// Composición
+// =============================================================================
 
 export const AsChild: Story = {
   render: () => (
