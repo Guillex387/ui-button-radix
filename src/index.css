@@ -66,4 +66,80 @@
   --color-btn-delete-disabled-bg: #dfdfdf;
   --color-btn-delete-disabled-border: #5d5d5d;
   --color-btn-delete-disabled-text: #5d5d5d;
+  /* Tertiary */
+  --color-btn-tertiary-text: #213c86;
+  --color-btn-tertiary-hover-text: #091646;
+  --color-btn-tertiary-active-text: #091646;
+  --color-btn-tertiary-focus-ring: #091646;
+  --color-btn-tertiary-disabled-text: #5d5d5d;
+  /* PrimaryAlternative (para fondos brand action #213C86) */
+  --color-btn-primary-alt-bg: #ffffff;
+  --color-btn-primary-alt-text: #213c86;
+  --color-btn-primary-alt-hover-bg: #c1dbfc;
+  --color-btn-primary-alt-hover-text: #091646;
+  --color-btn-primary-alt-active-bg: #c1dbfc;
+  --color-btn-primary-alt-active-text: #091646;
+  --color-btn-primary-alt-focus-ring: #d39c37;
+  --color-btn-primary-alt-focus-text: #213c86;
+  --color-btn-primary-alt-disabled-bg: #ffffff;
+  --color-btn-primary-alt-disabled-text: #5d5d5d;
+  /* PrimaryAlternativeNeutral (para fondos oscuros/negro) */
+  --color-btn-primary-alt-neutral-bg: rgba(255, 255, 255, 0.2);
+  --color-btn-primary-alt-neutral-border: #ffffff;
+  --color-btn-primary-alt-neutral-text: #ffffff;
+  --color-btn-primary-alt-neutral-hover-bg: rgba(43, 103, 229, 0.3);
+  --color-btn-primary-alt-neutral-hover-border: #ffffff;
+  --color-btn-primary-alt-neutral-hover-text: #ffffff;
+  --color-btn-primary-alt-neutral-active-bg: rgba(43, 103, 229, 0.3);
+  --color-btn-primary-alt-neutral-active-border: #ffffff;
+  --color-btn-primary-alt-neutral-active-text: #ffffff;
+  --color-btn-primary-alt-neutral-focus-ring: #ffb200;
+  --color-btn-primary-alt-neutral-focus-bg: rgba(255, 255, 255, 0.3);
+  --color-btn-primary-alt-neutral-focus-text: #ffffff;
+  --color-btn-primary-alt-neutral-disabled-bg: rgba(255, 255, 255, 0.1);
+  --color-btn-primary-alt-neutral-disabled-border: #ffffff;
+  --color-btn-primary-alt-neutral-disabled-text: #c5c5c5;
+  /* SecondaryAlternative (para fondos brand action #213C86) */
+  --color-btn-secondary-alt-bg: transparent;
+  --color-btn-secondary-alt-border: #ffffff;
+  --color-btn-secondary-alt-text: #ffffff;
+  --color-btn-secondary-alt-hover-bg: #425998;
+  --color-btn-secondary-alt-hover-border: #eff6ff;
+  --color-btn-secondary-alt-hover-text: #ffffff;
+  --color-btn-secondary-alt-active-bg: #425998;
+  --color-btn-secondary-alt-active-border: #eff6ff;
+  --color-btn-secondary-alt-active-text: #ffffff;
+  --color-btn-secondary-alt-focus-ring: #d39c37;
+  --color-btn-secondary-alt-focus-text: #ffffff;
+  --color-btn-secondary-alt-disabled-border: #c5c5c5;
+  --color-btn-secondary-alt-disabled-text: #c5c5c5;
+  /* TertiaryAlternative (para fondos action blue #2352D2, ej. banners sticky) */
+  --color-btn-tertiary-alt-text: #ffffff;
+  --color-btn-tertiary-alt-hover-text: #a6edfd;
+  --color-btn-tertiary-alt-active-text: #a6edfd;
+  --color-btn-tertiary-alt-focus-ring: #a6edfd;
+  --color-btn-tertiary-alt-focus-text: #a6edfd;
+  --color-btn-tertiary-alt-disabled-text: #dcd8d8;
+  /* TertiaryAlternativeDecorative (para fondos amarillo #FFEF85, ej. banners sticky) */
+  --color-btn-tertiary-alt-deco-text: #1e1e1e;
+  --color-btn-tertiary-alt-deco-hover-text: #7a4202;
+  --color-btn-tertiary-alt-deco-active-text: #7a4202;
+  --color-btn-tertiary-alt-deco-focus-ring: #7a4202;
+  --color-btn-tertiary-alt-deco-focus-text: #7a4202;
+  --color-btn-tertiary-alt-deco-disabled-text: #5d5d5d;
+  /* DeleteAlternative (outline, para fondos claros) */
+  --color-btn-delete-alt-bg: transparent;
+  --color-btn-delete-alt-border: #b93f38;
+  --color-btn-delete-alt-text: #b93f38;
+  --color-btn-delete-alt-hover-bg: rgba(160, 46, 38, 0.15);
+  --color-btn-delete-alt-hover-border: #a02e26;
+  --color-btn-delete-alt-hover-text: #a02e26;
+  --color-btn-delete-alt-active-bg: rgba(160, 46, 38, 0.15);
+  --color-btn-delete-alt-active-border: #a02e26;
+  --color-btn-delete-alt-active-text: #a02e26;
+  --color-btn-delete-alt-focus-ring: #a02e26;
+  --color-btn-delete-alt-focus-text: #a02e26;
+  --color-btn-delete-alt-disabled-bg: transparent;
+  --color-btn-delete-alt-disabled-border: #ababab;
+  --color-btn-delete-alt-disabled-text: #5d5d5d;
 }
