@@ -14,6 +14,20 @@
   --spacing-button-100-gap: 4px;
   --font-size-button-100: 12px;
   --size-button-icon-100: 16px;
+  /* Button icon default / ButtonIcon (Figma: 48×48, icon 24px, padding 12px) */
+  --size-button-icon-default-h: 48px;
+  --size-button-icon-default: 24px;
+  --spacing-button-icon-default: 12px;
+  /* Button icon ghost (Figma: 200=20px icon/8px pad, 100=16px/4px, 50=12px/2px) */
+  --size-button-icon-ghost-200: 20px;
+  --spacing-button-ghost-200: 8px;
+  --size-button-ghost-200-h: 36px;
+  --size-button-icon-ghost-100: 16px;
+  --spacing-button-ghost-100: 4px;
+  --size-button-ghost-100-h: 24px;
+  --size-button-icon-ghost-50: 12px;
+  --spacing-button-ghost-50: 2px;
+  --size-button-ghost-50-h: 16px;
   /* Radius */
   --radius-btn: 8px;
   /* Fonts */
@@ -38,6 +52,12 @@
   --color-btn-secondary-focus-border: #091646;
   --color-btn-secondary-disabled-border: #c5c5c5;
   --color-btn-secondary-disabled-text: #5d5d5d;
+  /* Ghost (icon ghost: transparent default, hover/active #c1dbfc) */
+  --color-btn-ghost-text: #213c86;
+  --color-btn-ghost-hover-bg: #c1dbfc;
+  --color-btn-ghost-active-bg: #c1dbfc;
+  --color-btn-ghost-focus-border: #091646;
+  --color-btn-ghost-disabled-text: #5d5d5d;
   /* Delete */
   --color-btn-delete: #b93f38;
   --color-btn-delete-hover: #a02e26;

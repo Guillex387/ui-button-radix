@@ -55,12 +55,12 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'delete'],
+      options: ['primary', 'secondary', 'delete', 'ghost'],
       description: 'Variante visual del botón',
     },
     size: {
       control: 'select',
-      options: ['default'],
+      options: ['default', 'size100', 'iconDefault', 'iconGhost200', 'iconGhost100', 'iconGhost50'],
       description: 'Tamaño',
     },
     disabled: {
@@ -105,6 +105,13 @@ export const Delete: Story = {
   },
 };
 
+export const Ghost: Story = {
+  args: {
+    variant: 'ghost',
+    children: 'Ghost',
+  },
+};
+
 export const Disabled: Story = {
   args: {
     variant: 'primary',
@@ -144,6 +151,47 @@ export const AllVariants: Story = {
       <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="delete">Delete</Button>
+      <Button variant="ghost">Ghost</Button>
+    </div>
+  ),
+};
+
+export const AllSizes: Story = {
+  render: () => (
+    <div className="flex flex-wrap items-end gap-4">
+      <Button variant="primary" size="default">
+        Default
+      </Button>
+      <Button variant="primary" size="size100">
+        Size 100
+      </Button>
+      <Button variant="primary" size="iconDefault" iconLeft={IconLeft} aria-label="Icon default" />
+      <Button variant="ghost" size="iconGhost200" iconLeft={IconLeft} aria-label="Ghost 200" />
+      <Button variant="ghost" size="iconGhost100" iconLeft={IconLeft} aria-label="Ghost 100" />
+      <Button variant="ghost" size="iconGhost50" iconLeft={IconLeft} aria-label="Ghost 50" />
+    </div>
+  ),
+};
+
+export const IconSizesOnly: Story = {
+  render: () => (
+    <div className="flex flex-wrap items-end gap-6">
+      <div className="flex flex-col items-center gap-2">
+        <Button variant="primary" size="iconDefault" iconLeft={IconLeft} aria-label="Icon default" />
+        <span className="text-xs text-gray-500">iconDefault (48×48, 24px)</span>
+      </div>
+      <div className="flex flex-col items-center gap-2">
+        <Button variant="ghost" size="iconGhost200" iconLeft={IconLeft} aria-label="Ghost 200" />
+        <span className="text-xs text-gray-500">iconGhost200 (36×36, 20px)</span>
+      </div>
+      <div className="flex flex-col items-center gap-2">
+        <Button variant="ghost" size="iconGhost100" iconLeft={IconLeft} aria-label="Ghost 100" />
+        <span className="text-xs text-gray-500">iconGhost100 (24×24, 16px)</span>
+      </div>
+      <div className="flex flex-col items-center gap-2">
+        <Button variant="ghost" size="iconGhost50" iconLeft={IconLeft} aria-label="Ghost 50" />
+        <span className="text-xs text-gray-500">iconGhost50 (16×16, 12px)</span>
+      </div>
     </div>
   ),
 };
@@ -159,6 +207,9 @@ export const WithIconsAllVariants: Story = {
       </Button>
       <Button variant="delete" iconLeft={IconLeft} iconRight={IconRight}>
         Delete
+      </Button>
+      <Button variant="ghost" iconLeft={IconLeft} iconRight={IconRight}>
+        Ghost
       </Button>
     </div>
   ),

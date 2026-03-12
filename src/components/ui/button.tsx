@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../lib/utils';
 
 const iconSlotClasses =
-  'shrink-0 flex items-center justify-center [&_svg]:size-[22px] [&_svg]:shrink-0 [&_svg]:pointer-events-none';
+  'shrink-0 flex items-center justify-center [&_svg]:size-[var(--size-button-icon-default)] [&_svg]:shrink-0 [&_svg]:pointer-events-none';
 
 export const buttonVariants = cva(
   [
@@ -12,7 +12,7 @@ export const buttonVariants = cva(
     'font-sans font-semibold text-base leading-normal cursor-pointer box-border',
     'transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-0',
     'disabled:pointer-events-none disabled:opacity-50',
-    '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:size-[22px]',
+    '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:size-[var(--size-button-icon-default)]',
   ].join(' '),
   {
     variants: {
@@ -53,6 +53,17 @@ export const buttonVariants = cva(
           'data-[state=focus]:bg-btn-delete data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-delete-focus-ring',
           'data-[state=disabled]:bg-btn-delete-disabled-bg data-[state=disabled]:border data-[state=disabled]:border-btn-delete-disabled-border data-[state=disabled]:text-btn-delete-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        ghost: [
+          'min-w-0 bg-transparent text-[var(--color-btn-ghost-text)] border border-transparent',
+          'hover:bg-[var(--color-btn-ghost-hover-bg)] hover:text-[var(--color-btn-ghost-text)]',
+          'active:bg-[var(--color-btn-ghost-active-bg)] active:text-[var(--color-btn-ghost-text)]',
+          'focus-visible:outline-[var(--color-btn-ghost-focus-border)] focus-visible:outline-2 focus-visible:outline-offset-0',
+          'disabled:bg-transparent disabled:text-[var(--color-btn-ghost-disabled-text)] disabled:opacity-100',
+          'data-[state=hover]:bg-[var(--color-btn-ghost-hover-bg)] data-[state=hover]:text-[var(--color-btn-ghost-text)]',
+          'data-[state=active]:bg-[var(--color-btn-ghost-active-bg)] data-[state=active]:text-[var(--color-btn-ghost-text)]',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-[var(--color-btn-ghost-focus-border)]',
+          'data-[state=disabled]:bg-transparent data-[state=disabled]:text-[var(--color-btn-ghost-disabled-text)] data-[state=disabled]:pointer-events-none',
+        ].join(' '),
       },
       size: {
         default: 'h-auto min-h-[48px]',
@@ -63,8 +74,26 @@ export const buttonVariants = cva(
           'text-[length:var(--font-size-button-100)]',
           '[&_svg]:size-[var(--size-button-icon-100)]',
         ].join(' '),
-        // size200: '',
-        // size50: '',
+        iconDefault: [
+          'h-[var(--size-button-icon-default-h)] w-[var(--size-button-icon-default-h)] min-h-0 min-w-0 gap-0',
+          'px-[var(--spacing-button-icon-default)] py-[var(--spacing-button-icon-default)]',
+          '[&_svg]:size-[var(--size-button-icon-default)]',
+        ].join(' '),
+        iconGhost200: [
+          'h-[var(--size-button-ghost-200-h)] w-[var(--size-button-ghost-200-h)] min-h-0 min-w-0',
+          'px-[var(--spacing-button-ghost-200)] py-[var(--spacing-button-ghost-200)] gap-0',
+          '[&_svg]:size-[var(--size-button-icon-ghost-200)]',
+        ].join(' '),
+        iconGhost100: [
+          'h-[var(--size-button-ghost-100-h)] w-[var(--size-button-ghost-100-h)] min-h-0 min-w-0',
+          'px-[var(--spacing-button-ghost-100)] py-[var(--spacing-button-ghost-100)] gap-0',
+          '[&_svg]:size-[var(--size-button-icon-ghost-100)]',
+        ].join(' '),
+        iconGhost50: [
+          'h-[var(--size-button-ghost-50-h)] w-[var(--size-button-ghost-50-h)] min-h-0 min-w-0',
+          'px-[var(--spacing-button-ghost-50)] py-[var(--spacing-button-ghost-50)] gap-0',
+          '[&_svg]:size-[var(--size-button-icon-ghost-50)]',
+        ].join(' '),
       },
     },
     defaultVariants: {
@@ -100,9 +129,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const hasIconSlots = Boolean(IconLeft || IconRight);
+    const hasText = children != null && children !== '';
+    const isIconOnly = hasIconSlots && !hasText;
     const mergedClassName = cn(
       buttonVariants({ variant, size, className }),
-      hasIconSlots ? 'justify-between' : 'justify-center'
+      isIconOnly ? 'justify-center' : hasIconSlots ? 'justify-between' : 'justify-center'
     );
 
     if (asChild) {
@@ -117,6 +148,25 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       return (
         <button ref={ref} type={type} disabled={disabled} className={mergedClassName} {...props}>
           {children}
+        </button>
+      );
+    }
+
+    if (isIconOnly) {
+      return (
+        <button ref={ref} type={type} disabled={disabled} className={mergedClassName} {...props}>
+          <span className="flex shrink-0 items-center justify-center gap-2">
+            {IconLeft && (
+              <span className={iconSlotClasses} aria-hidden>
+                <IconLeft />
+              </span>
+            )}
+            {IconRight && (
+              <span className={iconSlotClasses} aria-hidden>
+                <IconRight />
+              </span>
+            )}
+          </span>
         </button>
       );
     }
