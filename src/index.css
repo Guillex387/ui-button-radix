@@ -52,4 +52,15 @@
   --color-btn-tertiary-active-text: #091646;
   --color-btn-tertiary-focus-ring: #091646;
   --color-btn-tertiary-disabled-text: #5d5d5d;
+  /* PrimaryAlternative (para fondos brand action #213C86) */
+  --color-btn-primary-alt-bg: #ffffff;
+  --color-btn-primary-alt-text: #213c86;
+  --color-btn-primary-alt-hover-bg: #c1dbfc;
+  --color-btn-primary-alt-hover-text: #091646;
+  --color-btn-primary-alt-active-bg: #c1dbfc;
+  --color-btn-primary-alt-active-text: #091646;
+  --color-btn-primary-alt-focus-ring: #d39c37;
+  --color-btn-primary-alt-focus-text: #213c86;
+  --color-btn-primary-alt-disabled-bg: #ffffff;
+  --color-btn-primary-alt-disabled-text: #5d5d5d;
 }
