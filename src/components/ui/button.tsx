@@ -101,6 +101,18 @@ export const buttonVariants = cva(
           'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-secondary-alt-focus-ring data-[state=focus]:bg-btn-secondary-alt-bg data-[state=focus]:text-btn-secondary-alt-focus-text',
           'data-[state=disabled]:border-btn-secondary-alt-disabled-border data-[state=disabled]:text-btn-secondary-alt-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        tertiaryAlternative: [
+          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
+          'bg-transparent text-btn-tertiary-alt-text border border-transparent underline',
+          'hover:text-btn-tertiary-alt-hover-text',
+          'active:text-btn-tertiary-alt-active-text',
+          'focus-visible:outline-btn-tertiary-alt-focus-ring focus-visible:text-btn-tertiary-alt-focus-text',
+          'disabled:text-btn-tertiary-alt-disabled-text disabled:opacity-100',
+          'data-[state=hover]:text-btn-tertiary-alt-hover-text',
+          'data-[state=active]:text-btn-tertiary-alt-active-text',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-tertiary-alt-focus-ring data-[state=focus]:text-btn-tertiary-alt-focus-text',
+          'data-[state=disabled]:text-btn-tertiary-alt-disabled-text data-[state=disabled]:pointer-events-none',
+        ].join(' '),
       },
       size: {
         default: 'h-auto min-h-[48px]',

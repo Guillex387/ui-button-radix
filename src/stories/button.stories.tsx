@@ -60,7 +60,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative'],
+      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative', 'tertiaryAlternative'],
       description: 'Variante visual del botón',
     },
     size: {
@@ -175,6 +175,23 @@ export const SecondaryAlternative: Story = {
   ],
 };
 
+export const TertiaryAlternative: Story = {
+  args: {
+    variant: 'tertiaryAlternative',
+    children: 'Tertiary Alternative',
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  decorators: [
+    (Story) => (
+      <div className="bg-[#2352D2] p-8 rounded-lg">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
 export const Disabled: Story = {
   args: {
     variant: 'primary',
@@ -218,6 +235,7 @@ export const AllVariants: Story = {
       <Button variant="primaryAlternative">Primary Alternative</Button>
       <Button variant="primaryAlternativeNeutral">Primary Alt Neutral</Button>
       <Button variant="secondaryAlternative">Secondary Alternative</Button>
+      <Button variant="tertiaryAlternative">Tertiary Alternative</Button>
     </div>
   ),
 };
@@ -245,6 +263,9 @@ export const WithIconsAllVariants: Story = {
       </Button>
       <Button variant="secondaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
         Secondary Alternative
+      </Button>
+      <Button variant="tertiaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
+        Tertiary Alternative
       </Button>
     </div>
   ),

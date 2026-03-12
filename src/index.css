@@ -93,4 +93,11 @@
   --color-btn-secondary-alt-focus-text: #ffffff;
   --color-btn-secondary-alt-disabled-border: #c5c5c5;
   --color-btn-secondary-alt-disabled-text: #c5c5c5;
+  /* TertiaryAlternative (para fondos action blue #2352D2, ej. banners sticky) */
+  --color-btn-tertiary-alt-text: #ffffff;
+  --color-btn-tertiary-alt-hover-text: #a6edfd;
+  --color-btn-tertiary-alt-active-text: #a6edfd;
+  --color-btn-tertiary-alt-focus-ring: #a6edfd;
+  --color-btn-tertiary-alt-focus-text: #a6edfd;
+  --color-btn-tertiary-alt-disabled-text: #dcd8d8;
 }
