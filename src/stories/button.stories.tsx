@@ -65,7 +65,7 @@ const meta = {
     },
     size: {
       control: 'select',
-      options: ['default', 'size100', 'iconDefault', 'iconGhost200', 'iconGhost100', 'iconGhost50'],
+      options: ['default', 'size100', 'iconDefault', 'icon200', 'icon100', 'icon50'],
       description: 'Tamaño',
     },
     disabled: {
@@ -281,9 +281,9 @@ export const AllSizes: Story = {
         Size 100
       </Button>
       <Button variant="primary" size="iconDefault" iconLeft={IconLeft} aria-label="Icon default" />
-      <Button variant="ghost" size="iconGhost200" iconLeft={IconLeft} aria-label="Ghost 200" />
-      <Button variant="ghost" size="iconGhost100" iconLeft={IconLeft} aria-label="Ghost 100" />
-      <Button variant="ghost" size="iconGhost50" iconLeft={IconLeft} aria-label="Ghost 50" />
+      <Button variant="ghost" size="icon200" iconLeft={IconLeft} aria-label="Ghost 200" />
+      <Button variant="ghost" size="icon100" iconLeft={IconLeft} aria-label="Ghost 100" />
+      <Button variant="ghost" size="icon50" iconLeft={IconLeft} aria-label="Ghost 50" />
     </div>
   ),
 };
@@ -296,16 +296,16 @@ export const IconSizesOnly: Story = {
         <span className="text-xs text-gray-500">iconDefault (48×48, 24px)</span>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <Button variant="ghost" size="iconGhost200" iconLeft={IconLeft} aria-label="Ghost 200" />
-        <span className="text-xs text-gray-500">iconGhost200 (36×36, 20px)</span>
+        <Button variant="ghost" size="icon200" iconLeft={IconLeft} aria-label="Ghost 200" />
+        <span className="text-xs text-gray-500">icon200 (36×36, 20px)</span>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <Button variant="ghost" size="iconGhost100" iconLeft={IconLeft} aria-label="Ghost 100" />
-        <span className="text-xs text-gray-500">iconGhost100 (24×24, 16px)</span>
+        <Button variant="ghost" size="icon100" iconLeft={IconLeft} aria-label="Ghost 100" />
+        <span className="text-xs text-gray-500">icon100 (24×24, 16px)</span>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <Button variant="ghost" size="iconGhost50" iconLeft={IconLeft} aria-label="Ghost 50" />
-        <span className="text-xs text-gray-500">iconGhost50 (16×16, 12px)</span>
+        <Button variant="ghost" size="icon50" iconLeft={IconLeft} aria-label="Ghost 50" />
+        <span className="text-xs text-gray-500">icon50 (16×16, 12px)</span>
       </div>
     </div>
   ),

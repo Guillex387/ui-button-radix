@@ -18,16 +18,15 @@
   --size-button-icon-default-h: 48px;
   --size-button-icon-default: 24px;
   --spacing-button-icon-default: 12px;
-  /* Button icon ghost (Figma: 200=20px icon/8px pad, 100=16px/4px, 50=12px/2px) */
-  --size-button-icon-ghost-200: 20px;
-  --spacing-button-ghost-200: 8px;
-  --size-button-ghost-200-h: 36px;
-  --size-button-icon-ghost-100: 16px;
-  --spacing-button-ghost-100: 4px;
-  --size-button-ghost-100-h: 24px;
-  --size-button-icon-ghost-50: 12px;
-  --spacing-button-ghost-50: 2px;
-  --size-button-ghost-50-h: 16px;
+  /* Button icon (Figma: 200=20px icon/8px pad, 100=16px/4px, 50=12px/2px) */
+  --size-button-icon-200: 20px;
+  --spacing-button-icon-200: 8px;
+  --size-button-icon-200-h: 36px;
+  --spacing-button-icon-100: 4px;
+  --size-button-icon-100-h: 24px;
+  --size-button-icon-50: 12px;
+  --spacing-button-icon-50: 2px;
+  --size-button-icon-50-h: 16px;
   /* Radius */
   --radius-btn: 8px;
   /* Fonts */

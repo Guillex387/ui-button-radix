@@ -18,7 +18,6 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         primary: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-btn-primary text-white border border-transparent',
           'hover:bg-btn-primary-hover hover:text-white',
           'active:bg-btn-primary-active active:text-white',
@@ -30,7 +29,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:bg-btn-primary-disabled-bg data-[state=disabled]:border-btn-primary-disabled-border data-[state=disabled]:text-btn-primary-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         secondary: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-white text-btn-secondary-text border border-btn-secondary-border',
           'hover:bg-btn-secondary-hover-bg hover:border-btn-secondary-hover-border hover:text-btn-secondary-hover-text',
           'active:bg-btn-secondary-active-bg active:border-btn-secondary-active-border active:text-btn-secondary-hover-text',
@@ -42,7 +40,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:bg-white data-[state=disabled]:border-btn-secondary-disabled-border data-[state=disabled]:text-btn-secondary-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         delete: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-btn-delete text-white border border-transparent',
           'hover:bg-btn-delete-hover hover:text-white',
           'active:bg-btn-delete-active active:text-white',
@@ -54,7 +51,7 @@ export const buttonVariants = cva(
           'data-[state=disabled]:bg-btn-delete-disabled-bg data-[state=disabled]:border data-[state=disabled]:border-btn-delete-disabled-border data-[state=disabled]:text-btn-delete-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         ghost: [
-          'min-w-0 bg-transparent text-[var(--color-btn-ghost-text)] border border-transparent',
+          'bg-transparent text-[var(--color-btn-ghost-text)] border border-transparent',
           'hover:bg-[var(--color-btn-ghost-hover-bg)] hover:text-[var(--color-btn-ghost-text)]',
           'active:bg-[var(--color-btn-ghost-active-bg)] active:text-[var(--color-btn-ghost-text)]',
           'focus-visible:outline-[var(--color-btn-ghost-focus-border)] focus-visible:outline-2 focus-visible:outline-offset-0',
@@ -65,7 +62,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:bg-transparent data-[state=disabled]:text-[var(--color-btn-ghost-disabled-text)] data-[state=disabled]:pointer-events-none',
         ].join(' '),
         tertiary: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-transparent text-btn-tertiary-text border border-transparent underline',
           'hover:text-btn-tertiary-hover-text',
           'active:text-btn-tertiary-active-text',
@@ -77,7 +73,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:text-btn-tertiary-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         primaryAlternative: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-btn-primary-alt-bg text-btn-primary-alt-text border border-transparent',
           'hover:bg-btn-primary-alt-hover-bg hover:text-btn-primary-alt-hover-text',
           'active:bg-btn-primary-alt-active-bg active:text-btn-primary-alt-active-text',
@@ -89,7 +84,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:bg-btn-primary-alt-disabled-bg data-[state=disabled]:text-btn-primary-alt-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         primaryAlternativeNeutral: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-btn-primary-alt-neutral-bg text-btn-primary-alt-neutral-text border border-btn-primary-alt-neutral-border',
           'hover:bg-btn-primary-alt-neutral-hover-bg hover:border-btn-primary-alt-neutral-hover-border hover:text-btn-primary-alt-neutral-hover-text',
           'active:bg-btn-primary-alt-neutral-active-bg active:border-btn-primary-alt-neutral-active-border active:text-btn-primary-alt-neutral-active-text',
@@ -101,7 +95,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:bg-btn-primary-alt-neutral-disabled-bg data-[state=disabled]:border-btn-primary-alt-neutral-disabled-border data-[state=disabled]:text-btn-primary-alt-neutral-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         secondaryAlternative: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-btn-secondary-alt-bg text-btn-secondary-alt-text border border-btn-secondary-alt-border',
           'hover:bg-btn-secondary-alt-hover-bg hover:border-btn-secondary-alt-hover-border hover:text-btn-secondary-alt-hover-text',
           'active:bg-btn-secondary-alt-active-bg active:border-btn-secondary-alt-active-border active:text-btn-secondary-alt-active-text',
@@ -113,7 +106,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:border-btn-secondary-alt-disabled-border data-[state=disabled]:text-btn-secondary-alt-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         tertiaryAlternative: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-transparent text-btn-tertiary-alt-text border border-transparent underline',
           'hover:text-btn-tertiary-alt-hover-text',
           'active:text-btn-tertiary-alt-active-text',
@@ -125,7 +117,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:text-btn-tertiary-alt-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         tertiaryAlternativeDecorative: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-transparent text-btn-tertiary-alt-deco-text border border-transparent underline',
           'hover:text-btn-tertiary-alt-deco-hover-text',
           'active:text-btn-tertiary-alt-deco-active-text',
@@ -137,7 +128,6 @@ export const buttonVariants = cva(
           'data-[state=disabled]:text-btn-tertiary-alt-deco-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
         deleteAlternative: [
-          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-btn-delete-alt-bg text-btn-delete-alt-text border border-btn-delete-alt-border',
           'hover:bg-btn-delete-alt-hover-bg hover:border-btn-delete-alt-hover-border hover:text-btn-delete-alt-hover-text',
           'active:bg-btn-delete-alt-active-bg active:border-btn-delete-alt-active-border active:text-btn-delete-alt-active-text',
@@ -150,7 +140,7 @@ export const buttonVariants = cva(
         ].join(' '),
       },
       size: {
-        default: 'h-auto min-h-[48px]',
+        default: 'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)] h-auto min-h-[48px]',
         size100: [
           'h-[var(--size-button-100-h)] min-h-0',
           'px-[var(--spacing-button-100-x)] py-[var(--spacing-button-100-y)]',
@@ -163,20 +153,20 @@ export const buttonVariants = cva(
           'px-[var(--spacing-button-icon-default)] py-[var(--spacing-button-icon-default)]',
           '[&_svg]:size-[var(--size-button-icon-default)]',
         ].join(' '),
-        iconGhost200: [
-          'h-[var(--size-button-ghost-200-h)] w-[var(--size-button-ghost-200-h)] min-h-0 min-w-0',
-          'px-[var(--spacing-button-ghost-200)] py-[var(--spacing-button-ghost-200)] gap-0',
-          '[&_svg]:size-[var(--size-button-icon-ghost-200)]',
+        icon200: [
+          'h-[var(--size-button-icon-200-h)] w-[var(--size-button-icon-200-h)] min-h-0 min-w-0',
+          'px-[var(--spacing-button-icon-200)] py-[var(--spacing-button-icon-200)] gap-0',
+          '[&_svg]:size-[var(--size-button-icon-200)]',
         ].join(' '),
-        iconGhost100: [
-          'h-[var(--size-button-ghost-100-h)] w-[var(--size-button-ghost-100-h)] min-h-0 min-w-0',
-          'px-[var(--spacing-button-ghost-100)] py-[var(--spacing-button-ghost-100)] gap-0',
-          '[&_svg]:size-[var(--size-button-icon-ghost-100)]',
+        icon100: [
+          'h-[var(--size-button-icon-100-h)] w-[var(--size-button-icon-100-h)] min-h-0 min-w-0',
+          'px-[var(--spacing-button-icon-100)] py-[var(--spacing-button-icon-100)] gap-0',
+          '[&_svg]:size-[var(--size-button-icon-100)]',
         ].join(' '),
-        iconGhost50: [
-          'h-[var(--size-button-ghost-50-h)] w-[var(--size-button-ghost-50-h)] min-h-0 min-w-0',
-          'px-[var(--spacing-button-ghost-50)] py-[var(--spacing-button-ghost-50)] gap-0',
-          '[&_svg]:size-[var(--size-button-icon-ghost-50)]',
+        icon50: [
+          'h-[var(--size-button-icon-50-h)] w-[var(--size-button-icon-50-h)] min-h-0 min-w-0',
+          'px-[var(--spacing-button-icon-50)] py-[var(--spacing-button-icon-50)] gap-0',
+          '[&_svg]:size-[var(--size-button-icon-50)]',
         ].join(' '),
       },
     },
@@ -217,7 +207,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const isIconOnly = hasIconSlots && !hasText;
     const mergedClassName = cn(
       buttonVariants({ variant, size, className }),
-      isIconOnly ? 'justify-center' : hasIconSlots ? 'justify-between' : 'justify-center'
+      isIconOnly ? 'justify-center' : hasIconSlots ? 'justify-between' : 'justify-center',
     );
 
     if (asChild) {
