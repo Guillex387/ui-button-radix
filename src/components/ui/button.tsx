@@ -61,6 +61,17 @@ export const buttonVariants = cva(
           'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-[var(--color-btn-ghost-focus-border)]',
           'data-[state=disabled]:bg-transparent data-[state=disabled]:text-[var(--color-btn-ghost-disabled-text)] data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        ghostDelete: [
+          'bg-transparent text-[var(--color-btn-ghost-delete-text)] border border-transparent',
+          'hover:bg-[var(--color-btn-ghost-delete-hover-bg)] hover:text-[var(--color-btn-ghost-delete-text)]',
+          'active:bg-[var(--color-btn-ghost-delete-active-bg)] active:text-[var(--color-btn-ghost-delete-text)]',
+          'focus-visible:outline-[var(--color-btn-ghost-delete-focus-border)] focus-visible:outline-2 focus-visible:outline-offset-0',
+          'disabled:bg-transparent disabled:text-[var(--color-btn-ghost-delete-disabled-text)] disabled:opacity-100',
+          'data-[state=hover]:bg-[var(--color-btn-ghost-delete-hover-bg)] data-[state=hover]:text-[var(--color-btn-ghost-delete-text)]',
+          'data-[state=active]:bg-[var(--color-btn-ghost-delete-active-bg)] data-[state=active]:text-[var(--color-btn-ghost-delete-text)]',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-[var(--color-btn-ghost-delete-focus-border)]',
+          'data-[state=disabled]:bg-transparent data-[state=disabled]:text-[var(--color-btn-ghost-delete-disabled-text)] data-[state=disabled]:pointer-events-none',
+        ].join(' '),
         tertiary: [
           'bg-transparent text-btn-tertiary-text border border-transparent underline',
           'hover:text-btn-tertiary-hover-text',

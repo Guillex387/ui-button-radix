@@ -60,7 +60,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative', 'tertiaryAlternative', 'tertiaryAlternativeDecorative', 'deleteAlternative', 'ghost'],
+      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative', 'tertiaryAlternative', 'tertiaryAlternativeDecorative', 'deleteAlternative', 'ghost', 'ghostDelete'],
       description: 'Variante visual del botón',
     },
     size: {
@@ -260,6 +260,7 @@ export const AllVariants: Story = {
       <Button variant="secondary">Secondary</Button>
       <Button variant="delete">Delete</Button>
       <Button variant="ghost">Ghost</Button>
+      <Button variant="ghostDelete">Ghost Delete</Button>
       <Button variant="tertiary">Tertiary</Button>
       <Button variant="primaryAlternative">Primary Alternative</Button>
       <Button variant="primaryAlternativeNeutral">Primary Alt Neutral</Button>
@@ -325,6 +326,9 @@ export const WithIconsAllVariants: Story = {
       </Button>
       <Button variant="ghost" iconLeft={IconLeft} iconRight={IconRight}>
         Ghost
+      </Button>
+      <Button variant="ghostDelete" iconLeft={IconLeft} iconRight={IconRight}>
+        Ghost Delete
       </Button>
       <Button variant="tertiary" iconLeft={IconLeft} iconRight={IconRight}>
         Tertiary

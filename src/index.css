@@ -57,6 +57,12 @@
   --color-btn-ghost-active-bg: #c1dbfc;
   --color-btn-ghost-focus-border: #091646;
   --color-btn-ghost-disabled-text: #5d5d5d;
+  /* GhostDelete (transparent, red text, hover/active light red bg) */
+  --color-btn-ghost-delete-text: #b93f38;
+  --color-btn-ghost-delete-hover-bg: rgba(160, 46, 38, 0.15);
+  --color-btn-ghost-delete-active-bg: rgba(160, 46, 38, 0.15);
+  --color-btn-ghost-delete-focus-border: #a02e26;
+  --color-btn-ghost-delete-disabled-text: #5d5d5d;
   /* Delete */
   --color-btn-delete: #b93f38;
   --color-btn-delete-hover: #a02e26;
