@@ -60,7 +60,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'secondaryAlternative'],
+      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative'],
       description: 'Variante visual del botón',
     },
     size: {
@@ -98,12 +98,7 @@ const meta = {
   },
   render: (args: ButtonStoryArgs) => {
     const { dataState, ...rest } = args;
-    return (
-      <Button
-        {...rest}
-        data-state={dataState === 'default' || dataState == null ? undefined : dataState}
-      />
-    );
+    return <Button {...rest} data-state={dataState === 'default' || dataState == null ? undefined : dataState} />;
   },
 } as Meta<typeof Button>;
 
@@ -146,11 +141,38 @@ export const PrimaryAlternative: Story = {
   },
 };
 
+export const PrimaryAlternativeNeutral: Story = {
+  args: {
+    variant: 'primaryAlternativeNeutral',
+    children: 'Primary Alternative Neutral',
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  decorators: [
+    (Story) => (
+      <div className="bg-[#1a1a1a] p-8 rounded-lg">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
 export const SecondaryAlternative: Story = {
   args: {
     variant: 'secondaryAlternative',
     children: 'Secondary Alternative',
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  decorators: [
+    (Story) => (
+      <div className="bg-[#1a1a1a] p-8 rounded-lg">
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const Disabled: Story = {
@@ -194,6 +216,7 @@ export const AllVariants: Story = {
       <Button variant="delete">Delete</Button>
       <Button variant="tertiary">Tertiary</Button>
       <Button variant="primaryAlternative">Primary Alternative</Button>
+      <Button variant="primaryAlternativeNeutral">Primary Alt Neutral</Button>
       <Button variant="secondaryAlternative">Secondary Alternative</Button>
     </div>
   ),
@@ -216,6 +239,9 @@ export const WithIconsAllVariants: Story = {
       </Button>
       <Button variant="primaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
         Primary Alternative
+      </Button>
+      <Button variant="primaryAlternativeNeutral" iconLeft={IconLeft} iconRight={IconRight}>
+        Primary Alt Neutral
       </Button>
       <Button variant="secondaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
         Secondary Alternative

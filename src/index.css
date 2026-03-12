@@ -63,6 +63,22 @@
   --color-btn-primary-alt-focus-text: #213c86;
   --color-btn-primary-alt-disabled-bg: #ffffff;
   --color-btn-primary-alt-disabled-text: #5d5d5d;
+  /* PrimaryAlternativeNeutral (para fondos oscuros/negro) */
+  --color-btn-primary-alt-neutral-bg: rgba(255, 255, 255, 0.2);
+  --color-btn-primary-alt-neutral-border: #ffffff;
+  --color-btn-primary-alt-neutral-text: #ffffff;
+  --color-btn-primary-alt-neutral-hover-bg: rgba(43, 103, 229, 0.3);
+  --color-btn-primary-alt-neutral-hover-border: #ffffff;
+  --color-btn-primary-alt-neutral-hover-text: #ffffff;
+  --color-btn-primary-alt-neutral-active-bg: rgba(43, 103, 229, 0.3);
+  --color-btn-primary-alt-neutral-active-border: #ffffff;
+  --color-btn-primary-alt-neutral-active-text: #ffffff;
+  --color-btn-primary-alt-neutral-focus-ring: #ffb200;
+  --color-btn-primary-alt-neutral-focus-bg: rgba(255, 255, 255, 0.3);
+  --color-btn-primary-alt-neutral-focus-text: #ffffff;
+  --color-btn-primary-alt-neutral-disabled-bg: rgba(255, 255, 255, 0.1);
+  --color-btn-primary-alt-neutral-disabled-border: #ffffff;
+  --color-btn-primary-alt-neutral-disabled-text: #c5c5c5;
   /* SecondaryAlternative (para fondos brand action #213C86) */
   --color-btn-secondary-alt-bg: transparent;
   --color-btn-secondary-alt-border: #ffffff;

@@ -77,6 +77,18 @@ export const buttonVariants = cva(
           'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-primary-alt-focus-ring data-[state=focus]:bg-btn-primary-alt-bg data-[state=focus]:text-btn-primary-alt-focus-text',
           'data-[state=disabled]:bg-btn-primary-alt-disabled-bg data-[state=disabled]:text-btn-primary-alt-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        primaryAlternativeNeutral: [
+          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
+          'bg-btn-primary-alt-neutral-bg text-btn-primary-alt-neutral-text border border-btn-primary-alt-neutral-border',
+          'hover:bg-btn-primary-alt-neutral-hover-bg hover:border-btn-primary-alt-neutral-hover-border hover:text-btn-primary-alt-neutral-hover-text',
+          'active:bg-btn-primary-alt-neutral-active-bg active:border-btn-primary-alt-neutral-active-border active:text-btn-primary-alt-neutral-active-text',
+          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-btn-primary-alt-neutral-focus-ring focus-visible:bg-btn-primary-alt-neutral-focus-bg focus-visible:text-btn-primary-alt-neutral-focus-text',
+          'disabled:bg-btn-primary-alt-neutral-disabled-bg disabled:border-btn-primary-alt-neutral-disabled-border disabled:text-btn-primary-alt-neutral-disabled-text disabled:opacity-100',
+          'data-[state=hover]:bg-btn-primary-alt-neutral-hover-bg data-[state=hover]:border-btn-primary-alt-neutral-hover-border data-[state=hover]:text-btn-primary-alt-neutral-hover-text',
+          'data-[state=active]:bg-btn-primary-alt-neutral-active-bg data-[state=active]:border-btn-primary-alt-neutral-active-border data-[state=active]:text-btn-primary-alt-neutral-active-text',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-primary-alt-neutral-focus-ring data-[state=focus]:bg-btn-primary-alt-neutral-focus-bg data-[state=focus]:text-btn-primary-alt-neutral-focus-text',
+          'data-[state=disabled]:bg-btn-primary-alt-neutral-disabled-bg data-[state=disabled]:border-btn-primary-alt-neutral-disabled-border data-[state=disabled]:text-btn-primary-alt-neutral-disabled-text data-[state=disabled]:pointer-events-none',
+        ].join(' '),
         secondaryAlternative: [
           'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
           'bg-btn-secondary-alt-bg text-btn-secondary-alt-text border border-btn-secondary-alt-border',
@@ -138,7 +150,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const hasIconSlots = Boolean(IconLeft || IconRight);
     const mergedClassName = cn(
       buttonVariants({ variant, size, className }),
-      hasIconSlots ? 'justify-between' : 'justify-center'
+      hasIconSlots ? 'justify-between' : 'justify-center',
     );
 
     if (asChild) {
