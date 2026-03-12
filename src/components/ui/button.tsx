@@ -77,6 +77,18 @@ export const buttonVariants = cva(
           'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-primary-alt-focus-ring data-[state=focus]:bg-btn-primary-alt-bg data-[state=focus]:text-btn-primary-alt-focus-text',
           'data-[state=disabled]:bg-btn-primary-alt-disabled-bg data-[state=disabled]:text-btn-primary-alt-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        secondaryAlternative: [
+          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
+          'bg-btn-secondary-alt-bg text-btn-secondary-alt-text border border-btn-secondary-alt-border',
+          'hover:bg-btn-secondary-alt-hover-bg hover:border-btn-secondary-alt-hover-border hover:text-btn-secondary-alt-hover-text',
+          'active:bg-btn-secondary-alt-active-bg active:border-btn-secondary-alt-active-border active:text-btn-secondary-alt-active-text',
+          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-btn-secondary-alt-focus-ring focus-visible:bg-btn-secondary-alt-bg focus-visible:text-btn-secondary-alt-focus-text',
+          'disabled:bg-btn-secondary-alt-bg disabled:border-btn-secondary-alt-disabled-border disabled:text-btn-secondary-alt-disabled-text disabled:opacity-100',
+          'data-[state=hover]:bg-btn-secondary-alt-hover-bg data-[state=hover]:border-btn-secondary-alt-hover-border data-[state=hover]:text-btn-secondary-alt-hover-text',
+          'data-[state=active]:bg-btn-secondary-alt-active-bg data-[state=active]:border-btn-secondary-alt-active-border data-[state=active]:text-btn-secondary-alt-active-text',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-secondary-alt-focus-ring data-[state=focus]:bg-btn-secondary-alt-bg data-[state=focus]:text-btn-secondary-alt-focus-text',
+          'data-[state=disabled]:border-btn-secondary-alt-disabled-border data-[state=disabled]:text-btn-secondary-alt-disabled-text data-[state=disabled]:pointer-events-none',
+        ].join(' '),
       },
       size: {
         default: 'h-auto min-h-[48px]',

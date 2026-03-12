@@ -63,4 +63,18 @@
   --color-btn-primary-alt-focus-text: #213c86;
   --color-btn-primary-alt-disabled-bg: #ffffff;
   --color-btn-primary-alt-disabled-text: #5d5d5d;
+  /* SecondaryAlternative (para fondos brand action #213C86) */
+  --color-btn-secondary-alt-bg: transparent;
+  --color-btn-secondary-alt-border: #ffffff;
+  --color-btn-secondary-alt-text: #ffffff;
+  --color-btn-secondary-alt-hover-bg: #425998;
+  --color-btn-secondary-alt-hover-border: #eff6ff;
+  --color-btn-secondary-alt-hover-text: #ffffff;
+  --color-btn-secondary-alt-active-bg: #425998;
+  --color-btn-secondary-alt-active-border: #eff6ff;
+  --color-btn-secondary-alt-active-text: #ffffff;
+  --color-btn-secondary-alt-focus-ring: #d39c37;
+  --color-btn-secondary-alt-focus-text: #ffffff;
+  --color-btn-secondary-alt-disabled-border: #c5c5c5;
+  --color-btn-secondary-alt-disabled-text: #c5c5c5;
 }
