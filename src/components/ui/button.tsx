@@ -53,6 +53,18 @@ export const buttonVariants = cva(
           'data-[state=focus]:bg-btn-delete data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-delete-focus-ring',
           'data-[state=disabled]:bg-btn-delete-disabled-bg data-[state=disabled]:border data-[state=disabled]:border-btn-delete-disabled-border data-[state=disabled]:text-btn-delete-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        tertiary: [
+          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
+          'bg-transparent text-btn-tertiary-text border border-transparent underline',
+          'hover:text-btn-tertiary-hover-text',
+          'active:text-btn-tertiary-active-text',
+          'focus-visible:outline-btn-tertiary-focus-ring',
+          'disabled:text-btn-tertiary-disabled-text disabled:opacity-100',
+          'data-[state=hover]:text-btn-tertiary-hover-text',
+          'data-[state=active]:text-btn-tertiary-active-text',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-tertiary-focus-ring data-[state=focus]:text-btn-tertiary-hover-text',
+          'data-[state=disabled]:text-btn-tertiary-disabled-text data-[state=disabled]:pointer-events-none',
+        ].join(' '),
       },
       size: {
         default: 'h-auto min-h-[48px]',

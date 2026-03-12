@@ -46,4 +46,10 @@
   --color-btn-delete-disabled-bg: #dfdfdf;
   --color-btn-delete-disabled-border: #5d5d5d;
   --color-btn-delete-disabled-text: #5d5d5d;
+  /* Tertiary */
+  --color-btn-tertiary-text: #213c86;
+  --color-btn-tertiary-hover-text: #091646;
+  --color-btn-tertiary-active-text: #091646;
+  --color-btn-tertiary-focus-ring: #091646;
+  --color-btn-tertiary-disabled-text: #5d5d5d;
 }
