@@ -3,6 +3,11 @@ import { fn } from 'storybook/test';
 import type { ComponentType } from 'react';
 import { Button } from '../components/ui/button';
 
+/** Args de la story: incluye dataState solo para el control (se pasa como data-state al botón). */
+type ButtonStoryArgs = React.ComponentProps<typeof Button> & {
+  dataState?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
+};
+
 /* Iconos para las stories */
 const IconLeft = () => (
   <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" aria-hidden>
@@ -55,7 +60,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'delete'],
+      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative', 'tertiaryAlternative', 'tertiaryAlternativeDecorative', 'deleteAlternative'],
       description: 'Variante visual del botón',
     },
     size: {
@@ -67,6 +72,18 @@ const meta = {
       control: 'boolean',
       description: 'Deshabilita el botón',
     },
+    dataState: {
+      control: 'select',
+      options: ['default', 'hover', 'active', 'focus', 'disabled'],
+      mapping: {
+        default: undefined,
+        hover: 'hover',
+        active: 'active',
+        focus: 'focus',
+        disabled: 'disabled',
+      },
+      description: 'Estado visual forzado (atributo data-state del botón)',
+    },
     children: {
       control: 'text',
       description: 'Contenido del botón',
@@ -77,8 +94,13 @@ const meta = {
   args: {
     onClick: fn(),
     children: 'Button',
+    dataState: undefined,
   },
-} satisfies Meta<typeof Button>;
+  render: (args: ButtonStoryArgs) => {
+    const { dataState, ...rest } = args;
+    return <Button {...rest} data-state={dataState === 'default' || dataState == null ? undefined : dataState} />;
+  },
+} as Meta<typeof Button>;
 
 export default meta;
 
@@ -103,6 +125,92 @@ export const Delete: Story = {
     variant: 'delete',
     children: 'Delete',
   },
+};
+
+export const DeleteAlternative: Story = {
+  args: {
+    variant: 'deleteAlternative',
+    children: 'Delete Alternative',
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    variant: 'tertiary',
+    children: 'Tertiary',
+  },
+};
+
+export const PrimaryAlternative: Story = {
+  args: {
+    variant: 'primaryAlternative',
+    children: 'Primary Alternative',
+  },
+};
+
+export const PrimaryAlternativeNeutral: Story = {
+  args: {
+    variant: 'primaryAlternativeNeutral',
+    children: 'Primary Alternative Neutral',
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  decorators: [
+    (Story) => (
+      <div className="bg-[#1a1a1a] p-8 rounded-lg">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export const SecondaryAlternative: Story = {
+  args: {
+    variant: 'secondaryAlternative',
+    children: 'Secondary Alternative',
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  decorators: [
+    (Story) => (
+      <div className="bg-[#1a1a1a] p-8 rounded-lg">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export const TertiaryAlternative: Story = {
+  args: {
+    variant: 'tertiaryAlternative',
+    children: 'Tertiary Alternative',
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  decorators: [
+    (Story) => (
+      <div className="bg-[#2352D2] p-8 rounded-lg">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export const TertiaryAlternativeDecorative: Story = {
+  args: {
+    variant: 'tertiaryAlternativeDecorative',
+    children: 'Tertiary Alternative Decorative',
+  },
+  decorators: [
+    (Story) => (
+      <div className="bg-[#FFEF85] p-8 rounded-lg">
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const Disabled: Story = {
@@ -144,6 +252,13 @@ export const AllVariants: Story = {
       <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="delete">Delete</Button>
+      <Button variant="tertiary">Tertiary</Button>
+      <Button variant="primaryAlternative">Primary Alternative</Button>
+      <Button variant="primaryAlternativeNeutral">Primary Alt Neutral</Button>
+      <Button variant="secondaryAlternative">Secondary Alternative</Button>
+      <Button variant="tertiaryAlternative">Tertiary Alternative</Button>
+      <Button variant="tertiaryAlternativeDecorative">Tertiary Alt Decorative</Button>
+      <Button variant="deleteAlternative">Delete Alternative</Button>
     </div>
   ),
 };
@@ -159,6 +274,27 @@ export const WithIconsAllVariants: Story = {
       </Button>
       <Button variant="delete" iconLeft={IconLeft} iconRight={IconRight}>
         Delete
+      </Button>
+      <Button variant="tertiary" iconLeft={IconLeft} iconRight={IconRight}>
+        Tertiary
+      </Button>
+      <Button variant="primaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
+        Primary Alternative
+      </Button>
+      <Button variant="primaryAlternativeNeutral" iconLeft={IconLeft} iconRight={IconRight}>
+        Primary Alt Neutral
+      </Button>
+      <Button variant="secondaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
+        Secondary Alternative
+      </Button>
+      <Button variant="tertiaryAlternative" iconLeft={IconLeft} iconRight={IconRight}>
+        Tertiary Alternative
+      </Button>
+      <Button variant="tertiaryAlternativeDecorative" iconLeft={IconLeft} iconRight={IconRight}>
+        Tertiary Alt Decorative
+      </Button>
+      <Button variant="deleteAlternative" iconLeft={IconLeft} iconRight={IconRight}>
+        Delete Alternative
       </Button>
     </div>
   ),

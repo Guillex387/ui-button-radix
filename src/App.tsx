@@ -118,6 +118,30 @@ function App() {
       </section>
 
       <section className="mb-12">
+        <h2 className="font-inter font-bold text-base text-[#121212] m-0 mb-4">ButtonAltTertiary</h2>
+        <div className="flex flex-wrap gap-4 items-center mb-6">
+          <Button variant="tertiary">Button</Button>
+          <Button variant="tertiary" data-state="hover">
+            Button
+          </Button>
+          <Button variant="tertiary" data-state="active">
+            Button
+          </Button>
+          <Button variant="tertiary" data-state="focus">
+            Button
+          </Button>
+          <Button variant="tertiary" data-state="disabled">
+            Button
+          </Button>
+        </div>
+        <div className="flex flex-wrap gap-4 items-center">
+          <Button variant="tertiary" iconLeft={IconSend} iconRight={IconArrowRight}>
+            Button
+          </Button>
+        </div>
+      </section>
+
+      <section className="mb-12">
         <h2 className="font-inter font-bold text-base text-[#121212] m-0 mb-4">ButtonAltDelete</h2>
         <div className="flex flex-wrap gap-4 items-center">
           <Button variant="delete" iconLeft={IconTrash}>
