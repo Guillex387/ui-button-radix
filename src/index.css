@@ -107,4 +107,19 @@
   --color-btn-tertiary-alt-deco-focus-ring: #7a4202;
   --color-btn-tertiary-alt-deco-focus-text: #7a4202;
   --color-btn-tertiary-alt-deco-disabled-text: #5d5d5d;
+  /* DeleteAlternative (outline, para fondos claros) */
+  --color-btn-delete-alt-bg: transparent;
+  --color-btn-delete-alt-border: #b93f38;
+  --color-btn-delete-alt-text: #b93f38;
+  --color-btn-delete-alt-hover-bg: rgba(160, 46, 38, 0.15);
+  --color-btn-delete-alt-hover-border: #a02e26;
+  --color-btn-delete-alt-hover-text: #a02e26;
+  --color-btn-delete-alt-active-bg: rgba(160, 46, 38, 0.15);
+  --color-btn-delete-alt-active-border: #a02e26;
+  --color-btn-delete-alt-active-text: #a02e26;
+  --color-btn-delete-alt-focus-ring: #a02e26;
+  --color-btn-delete-alt-focus-text: #a02e26;
+  --color-btn-delete-alt-disabled-bg: transparent;
+  --color-btn-delete-alt-disabled-border: #ababab;
+  --color-btn-delete-alt-disabled-text: #5d5d5d;
 }

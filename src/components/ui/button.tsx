@@ -125,6 +125,18 @@ export const buttonVariants = cva(
           'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-tertiary-alt-deco-focus-ring data-[state=focus]:text-btn-tertiary-alt-deco-focus-text',
           'data-[state=disabled]:text-btn-tertiary-alt-deco-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        deleteAlternative: [
+          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
+          'bg-btn-delete-alt-bg text-btn-delete-alt-text border border-btn-delete-alt-border',
+          'hover:bg-btn-delete-alt-hover-bg hover:border-btn-delete-alt-hover-border hover:text-btn-delete-alt-hover-text',
+          'active:bg-btn-delete-alt-active-bg active:border-btn-delete-alt-active-border active:text-btn-delete-alt-active-text',
+          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-btn-delete-alt-focus-ring focus-visible:bg-btn-delete-alt-bg focus-visible:text-btn-delete-alt-focus-text',
+          'disabled:bg-btn-delete-alt-disabled-bg disabled:border-btn-delete-alt-disabled-border disabled:text-btn-delete-alt-disabled-text disabled:opacity-100',
+          'data-[state=hover]:bg-btn-delete-alt-hover-bg data-[state=hover]:border-btn-delete-alt-hover-border data-[state=hover]:text-btn-delete-alt-hover-text',
+          'data-[state=active]:bg-btn-delete-alt-active-bg data-[state=active]:border-btn-delete-alt-active-border data-[state=active]:text-btn-delete-alt-active-text',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-delete-alt-focus-ring data-[state=focus]:bg-btn-delete-alt-bg data-[state=focus]:text-btn-delete-alt-focus-text',
+          'data-[state=disabled]:bg-btn-delete-alt-disabled-bg data-[state=disabled]:border-btn-delete-alt-disabled-border data-[state=disabled]:text-btn-delete-alt-disabled-text data-[state=disabled]:pointer-events-none',
+        ].join(' '),
       },
       size: {
         default: 'h-auto min-h-[48px]',

@@ -60,7 +60,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative', 'tertiaryAlternative', 'tertiaryAlternativeDecorative'],
+      options: ['primary', 'secondary', 'delete', 'tertiary', 'primaryAlternative', 'primaryAlternativeNeutral', 'secondaryAlternative', 'tertiaryAlternative', 'tertiaryAlternativeDecorative', 'deleteAlternative'],
       description: 'Variante visual del botón',
     },
     size: {
@@ -124,6 +124,13 @@ export const Delete: Story = {
   args: {
     variant: 'delete',
     children: 'Delete',
+  },
+};
+
+export const DeleteAlternative: Story = {
+  args: {
+    variant: 'deleteAlternative',
+    children: 'Delete Alternative',
   },
 };
 
@@ -251,6 +258,7 @@ export const AllVariants: Story = {
       <Button variant="secondaryAlternative">Secondary Alternative</Button>
       <Button variant="tertiaryAlternative">Tertiary Alternative</Button>
       <Button variant="tertiaryAlternativeDecorative">Tertiary Alt Decorative</Button>
+      <Button variant="deleteAlternative">Delete Alternative</Button>
     </div>
   ),
 };
@@ -284,6 +292,9 @@ export const WithIconsAllVariants: Story = {
       </Button>
       <Button variant="tertiaryAlternativeDecorative" iconLeft={IconLeft} iconRight={IconRight}>
         Tertiary Alt Decorative
+      </Button>
+      <Button variant="deleteAlternative" iconLeft={IconLeft} iconRight={IconRight}>
+        Delete Alternative
       </Button>
     </div>
   ),
