@@ -100,4 +100,11 @@
   --color-btn-tertiary-alt-focus-ring: #a6edfd;
   --color-btn-tertiary-alt-focus-text: #a6edfd;
   --color-btn-tertiary-alt-disabled-text: #dcd8d8;
+  /* TertiaryAlternativeDecorative (para fondos amarillo #FFEF85, ej. banners sticky) */
+  --color-btn-tertiary-alt-deco-text: #1e1e1e;
+  --color-btn-tertiary-alt-deco-hover-text: #7a4202;
+  --color-btn-tertiary-alt-deco-active-text: #7a4202;
+  --color-btn-tertiary-alt-deco-focus-ring: #7a4202;
+  --color-btn-tertiary-alt-deco-focus-text: #7a4202;
+  --color-btn-tertiary-alt-deco-disabled-text: #5d5d5d;
 }

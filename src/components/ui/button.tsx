@@ -113,6 +113,18 @@ export const buttonVariants = cva(
           'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-tertiary-alt-focus-ring data-[state=focus]:text-btn-tertiary-alt-focus-text',
           'data-[state=disabled]:text-btn-tertiary-alt-disabled-text data-[state=disabled]:pointer-events-none',
         ].join(' '),
+        tertiaryAlternativeDecorative: [
+          'min-w-[68px] px-[var(--spacing-btn-x)] py-[var(--spacing-btn-y)]',
+          'bg-transparent text-btn-tertiary-alt-deco-text border border-transparent underline',
+          'hover:text-btn-tertiary-alt-deco-hover-text',
+          'active:text-btn-tertiary-alt-deco-active-text',
+          'focus-visible:outline-btn-tertiary-alt-deco-focus-ring focus-visible:text-btn-tertiary-alt-deco-focus-text',
+          'disabled:text-btn-tertiary-alt-deco-disabled-text disabled:opacity-100',
+          'data-[state=hover]:text-btn-tertiary-alt-deco-hover-text',
+          'data-[state=active]:text-btn-tertiary-alt-deco-active-text',
+          'data-[state=focus]:outline data-[state=focus]:outline-2 data-[state=focus]:outline-offset-0 data-[state=focus]:outline-btn-tertiary-alt-deco-focus-ring data-[state=focus]:text-btn-tertiary-alt-deco-focus-text',
+          'data-[state=disabled]:text-btn-tertiary-alt-deco-disabled-text data-[state=disabled]:pointer-events-none',
+        ].join(' '),
       },
       size: {
         default: 'h-auto min-h-[48px]',
